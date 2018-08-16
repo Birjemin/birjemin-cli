@@ -1,0 +1,20 @@
+{
+  "name": "birjemin-cli",
+  "version": "1.0.0",
+  "description": "birjemin for cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "birjemin",
+  "license": "MIT",
+  "bin": {
+    "birjemin-cli": "./bin/index.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "commander": "^2.17.1",
+    "inquirer": "^6.1.0",
+    "superagent": "^3.8.3"
+  }
+}
