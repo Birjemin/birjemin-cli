@@ -13,6 +13,12 @@ program
   .action(() => {
     require(res('music-163'))
   })
+program
+  .command('cover')
+  .description('合成背景图')
+  .action(() => {
+    require(res('cover'))
+  })
 
 program.parse(process.argv)
 if (!program.args.length) {

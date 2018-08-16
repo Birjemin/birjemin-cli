@@ -53,7 +53,7 @@ class Spider {
 
   async writeFile(list) {
     let res = await new Promise((resolve) => {
-        fs.writeFile('album.json', JSON.stringify(list), 'utf-8', err => {
+        fs.writeFile('./data/album.json', JSON.stringify(list), 'utf-8', err => {
         if (err) throw err
         else resolve('成功')
       });

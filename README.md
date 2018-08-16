@@ -4,7 +4,6 @@
 1. git clone
 2. npm install
 3. npm link
-4. birjemin-cli
 
 ### 使用
 
@@ -17,13 +16,20 @@ birjemin-cli 163
 2. 参数:
 
 需要输入的派别(下图):
-![派别](./images/style.png)
+![派别](./assets/style.png)
 
 需要输入的类别：
 最新，最热
 
 3. eg:
-![demo](./images/demo.png)
+![demo](./assets/demo.png)
+
+### 合成图片
+
+1. 命令:
+```
+birjemin-cli cover
+```
 
 ### 参考
 
