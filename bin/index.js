@@ -15,9 +15,15 @@ program
   })
 program
   .command('cover')
-  .description('合成背景图')
+  .description('合成背景图(鸡肋)')
   .action(() => {
     require(res('cover'))
+  })
+program
+  .command('cover2')
+  .description('合成背景图（promotion）')
+  .action(() => {
+    require(res('cover2'))
   })
 
 program.parse(process.argv)

@@ -14,8 +14,10 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "commander": "^2.17.1",
+    "gm": "^1.23.1",
     "inquirer": "^6.1.0",
     "jimp": "^0.3.5",
+    "request": "^2.88.0",
     "superagent": "^3.8.3"
   }
 }
