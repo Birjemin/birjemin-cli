@@ -33,12 +33,8 @@ class Image {
     .write(this.getImagePath(), err => {
       err && console.log(err.message || '出错了！');
       // delete cover
-      fs.unlink(this.head, err => {
-        err && console.log(err.message || '删除失败！')
-      })
-      fs.unlink(this.qr, err => {
-        err && console.log(err.message || '删除失败！')
-      })
+      fs.unlink(this.head, err => { err && console.log(err.message || '删除失败！') })
+      fs.unlink(this.qr, err => { err && console.log(err.message || '删除失败！') })
     })
     console.log('Done...（请查看data目录）')
   }
@@ -49,21 +45,13 @@ class Image {
   }
 
   async createHead() {
-    let state = await new Promise((resolve) => {
-      fs.exists(this.cover, exists => {
-        resolve(exists ? true : false)
-      })
-    }).catch(err => {
-      console.log('image not exist')
-    });
-    if (state) {
-      return this.cover
-    }
+    let state = await new Promise(resolve => {
+      fs.exists(this.cover, exists => { resolve(exists ? true : false)})
+    }).catch(err => { console.log('image not exist') });
+    if (state) { return this.cover }
 
     let exsist = await new Promise(resolve => {
-      gm(request(this.cover)).write(this.head, err => {
-        resolve(err)
-      })
+      gm(request(this.cover)).write(this.head, err => { resolve(err) })
     })
     exsist && console.log('image save fail')
   }
