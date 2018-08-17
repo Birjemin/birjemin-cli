@@ -45,8 +45,11 @@ brew install ghostscript
 ```
 birjemin-cli cover2
 ```
+3. 结果
 
-3. Q/A
+![cover](./assets/cover.png)
+
+4. Q/A
 
 Q: Command failed: gm convert: Unable to read font (/usr/local/share/ghostscript/fonts/n019003l.pfb)
 
