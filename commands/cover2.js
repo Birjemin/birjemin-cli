@@ -40,8 +40,8 @@ class Image {
   }
 
   async createQr() {
-    let qr_svg = qr.image(this.url, { type: 'png' });
-    qr_svg.pipe(require('fs').createWriteStream(this.qr));
+    let qrPng = qr.image(this.url, { type: 'png' });
+    qrPng.pipe(require('fs').createWriteStream(this.qr));
   }
 
   async createHead() {
