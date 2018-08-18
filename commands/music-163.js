@@ -16,7 +16,7 @@ class Spider {
         throw 'url not correct'
       }
       let list = await this.parseHtml(html)
-      let res = await this.writeFile(list)
+      await this.writeFile(list)
       console.log('Done...（请查看album.json）')
     } catch(err) {
       console.log('[Error]' + err)
@@ -25,12 +25,8 @@ class Spider {
 
   async request() {
     let res = await new Promise((resolve) => {
-        request.get(this.url).end((err, res) => {
-          resolve(res.text)
-      });
-    }).catch(error => {
-      resolve('')
-    })
+        request.get(this.url).end((err, res) => { resolve(res.text) });
+    }).catch(error => { resolve('') })
     return res
   }
 
@@ -57,9 +53,7 @@ class Spider {
         if (err) throw err
         else resolve('成功')
       });
-    }).catch(error => {
-      resolve({})
-    })
+    }).catch(error => { resolve({}) })
     return res
   }
 }

@@ -24,12 +24,12 @@ class Image {
     .draw('image Over 10, 10, 140, 140 "' + this.head + '"')
     .draw('image Over 180, 180, 70, 70 "' + this.qr + '"')
     .font('./font/微软雅黑.ttf')
+    .fill('#1B4548')
     .drawText(10, 172, this.title)
     .fontSize(11)
-    .drawText(10, 204, this.author)
+    .drawText(10, 204, '作者: ' + this.author)
     .drawText(10, 230, this.num.toString() + '次播放')
     .fontSize(12)
-    .fill('#000')
     .write(this.getImagePath(), err => {
       err && console.log(err.message || '出错了！');
       // delete cover
