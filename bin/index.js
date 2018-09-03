@@ -25,6 +25,30 @@ program
   .action(() => {
     require(res('cover2'))
   })
+program
+  .command('list')
+  .description('描述每个项目')
+  .action(() => {
+    require(res('file-list'))
+  })
+program
+  .command('add <dir> <desc>')
+  .description('增加每个项目')
+  .action(() => {
+    require(res('file-add'))
+  })
+program
+  .command('alter <dir> <desc>')
+  .description('修改某个项目')
+  .action(() => {
+    require(res('file-alter'))
+  })
+program
+  .command('del <dir>')
+  .description('删除某个项目')
+  .action((dir) => {
+    require(res('file-del'))
+  })
 
 program.parse(process.argv)
 if (!program.args.length) {
